@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listarleftOneRowModel" type="com.adnansapplication.app.modules.notificationactivity.data.model.ListarleftOneRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearActivitydetail1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageArrowleftOne"
+            android:layout_height="@dimen/_18pxh"
+            android:layout_marginBottom="@dimen/_113pxv"
+            android:layout_marginStart="@dimen/_19pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_width="@dimen/_18pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearActivitydetail2"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_weight="0.94" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTransactionNik"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{listarleftOneRowModel.txtTransactionNik}"
+                style="@style/txtPoppinsbold14_1" tools:text="@string/msg_transaction_nike"/>
+            <TextView android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03"
+                android:text="@{listarleftOneRowModel.txtDescription}"
+                style="@style/txtPoppinsregular12" tools:text="@string/msg_culpa_cillum_consectetur"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{listarleftOneRowModel.txtTime}"
+                style="@style/txtPoppinsregular10_1" tools:text="@string/msg_april_30_2014_1_01"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

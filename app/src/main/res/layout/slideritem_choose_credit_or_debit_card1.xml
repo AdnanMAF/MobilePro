@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSlideruserModel" type="com.adnansapplication.app.modules.choosecreditordebitcard.data.model.ImageSliderSlideruserModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearCreditCard"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylelight_blue_A200cornerRadius">
+        <ImageView android:id="@+id/imageUser"
+            android:layout_height="@dimen/_22pxh"
+            android:layout_marginEnd="@dimen/_24pxh"
+            android:layout_marginStart="@dimen/_24pxh"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="@dimen/_36pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_user_gray_400"
+            imageUrl="@{imageSliderSlideruserModel.imageUser}"
+            placeHolder="@{@drawable/img_user_gray_400}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_user_gray_400"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnlanguage"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_21pxh"
+            android:layout_marginStart="@dimen/_21pxh"
+            android:layout_marginTop="@dimen/_30pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{imageSliderSlideruserModel.txtLanguage}"
+                style="@style/txtPoppinsbold24" tools:text="@string/msg_6326_9124"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowcardholder"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCARDHOLDER"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.55"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{imageSliderSlideruserModel.txtCARDHOLDER}"
+                    style="@style/txtPoppinsregular10_2" tools:text="@string/lbl_card_holder"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCARDSAVE"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginStart="@dimen/_37pxh"
+                    android:layout_weight="0.45"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{imageSliderSlideruserModel.txtCARDSAVE}"
+                    style="@style/txtPoppinsregular10_2" tools:text="@string/lbl_card_save"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowdominicovo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDominicOvo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_weight="0.69"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{imageSliderSlideruserModel.txtDominicOvo}"
+                    style="@style/txtPoppinsbold10_2" tools:text="@string/lbl_dominic_ovo"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDebitcardexpi"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_44pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.31"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{imageSliderSlideruserModel.txtDebitcardexpi}"
+                    style="@style/txtPoppinsbold10_2" tools:text="@string/lbl_06_24"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

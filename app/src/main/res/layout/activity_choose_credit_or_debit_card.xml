@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="chooseCreditOrDebitCardVM" type="com.adnansapplication.app.modules.choosecreditordebitcard.data.viewmodel.ChooseCreditOrDebitCardVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameChooseCreditO"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5pxh"
+                android:layout_marginStart="@dimen/_9pxh"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearRowplusicon"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/linearRowarrowleft"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.91"
+                        android:layout_width="0dp" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageArrowleft"
+                            android:layout_height="@dimen/_12pxh"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginTop="@dimen/_5pxv"
+                            android:layout_width="@dimen/_6pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrowleft_bluegray_300"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft_bluegray_300"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtChooseCard"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_21pxh"
+                            android:layout_weight="0.95"
+                            android:layout_width="0dp"
+                            android:letterSpacing="0.03"
+                            android:singleLine="true"
+                            android:text="@{chooseCreditOrDebitCardVM.chooseCreditOrDebitCardModel.txtChooseCard}"
+                            style="@style/txtPoppinsbold16" tools:text="@string/lbl_choose_card"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/imagePlusicon"
+                        android:layout_height="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_5pxv"
+                        android:layout_marginStart="@dimen/_176pxh"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="@dimen/_14pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_plusicon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_plusicon"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <com.asksira.loopingviewpager.LoopingViewPager
+                android:gravity="start"
+                android:id="@+id/imageSliderSlideruser"
+                android:layout_height="@dimen/_190pxv"
+                android:layout_marginTop="@dimen/_43pxv"
+                android:layout_width="match_parent"
+                app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+            <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                android:id="@+id/indicatorSettings"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_135pxh"
+                android:layout_marginStart="@dimen/_136pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_width="wrap_content"
+                app:drawable_normal="@drawable/indicator_unselected_bg_blue_50_radius_8"
+                app:drawable_selected="@drawable/indicator_selected_bg_light_blue_a200_radius_8"
+                app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_8pxh"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnPay766EightySix"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_353pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_pay_766_86"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_pay_766_86"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

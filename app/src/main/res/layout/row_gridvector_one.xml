@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="gridvectorOneRowModel" type="com.adnansapplication.app.modules.explore.data.model.GridvectorOneRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearWomanTShirt"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_white_a700_border_blue_50_radius_35"
+            android:id="@+id/btnVectorOne"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_70pxh"
+            android:layout_width="@dimen/_70pxh"
+            android:paddingHorizontal="@dimen/_26pxh"
+            android:paddingVertical="@dimen/_26pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_vector_light_blue_a200_70x70" tools:ignore="ContentDescription"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtTShirtOne"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15pxh"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@{gridvectorOneRowModel.txtTShirtOne}"
+            style="@style/txtPoppinsbold10_1" tools:text="@string/lbl_t_shirt"/>
+    </LinearLayout>
+</layout>

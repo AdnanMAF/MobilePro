@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listshippingdetailRowModel" type="com.adnansapplication.app.modules.orderdetails.data.model.ListshippingdetailRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearShippingDetail1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylecornerRadius">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtShippingDetail"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@{listshippingdetailRowModel.txtShippingDetail}"
+            style="@style/txtPoppinsbold14_1" tools:text="@string/msg_shipping_details"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearShippingDetail2"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+            <LinearLayout android:id="@+id/linearDateshipping"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDateShipping"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.46"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{listshippingdetailRowModel.txtDateShipping}"
+                    style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_date_shipping"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_114pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.54"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{listshippingdetailRowModel.txtMonth}"
+                    style="@style/txtPoppinsregular12_2" tools:text="@string/msg_january_16_2020"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearShipping"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtShippingOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.39"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{listshippingdetailRowModel.txtShippingOne}"
+                    style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_shipping"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPOSReggular"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_168pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.61"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{listshippingdetailRowModel.txtPOSReggular}"
+                    style="@style/txtPoppinsregular12_2" tools:text="@string/lbl_pos_reggular"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearNumberresi"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNoResi"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.35"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{listshippingdetailRowModel.txtNoResi}"
+                    style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_no_resi"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtResinumber"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_170pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.65"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{listshippingdetailRowModel.txtResinumber}"
+                    style="@style/txtPoppinsregular12_2" tools:text="@string/lbl_000192848573"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAddress"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12pxv"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_28pxv"
+                    android:layout_weight="0.25"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{listshippingdetailRowModel.txtAddress}"
+                    style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_address"/>
+                <TextView android:id="@+id/txtLanguage"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_98pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.75"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.03"
+                    android:text="@{listshippingdetailRowModel.txtLanguage}"
+                    style="@style/txtPoppinsregular12_2" tools:text="@string/msg_2727_new_owerri"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

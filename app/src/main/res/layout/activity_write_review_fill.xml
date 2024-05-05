@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="writeReviewFillVM" type="com.adnansapplication.app.modules.writereviewfill.data.viewmodel.WriteReviewFillVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameWriteReviewFi"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_25pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_9pxh"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowarrowleft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_12pxh"
+                        android:layout_marginBottom="@dimen/_5pxv"
+                        android:layout_marginTop="@dimen/_6pxv"
+                        android:layout_width="@dimen/_6pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft_bluegray_300"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft_bluegray_300"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWriteReview"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_21pxh"
+                        android:layout_weight="0.95"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{writeReviewFillVM.writeReviewFillModel.txtWriteReview}"
+                        style="@style/txtPoppinsbold16" tools:text="@string/lbl_write_review"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <TextView android:gravity="start"
+                android:id="@+id/txtPleasewriteOv"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_43pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03"
+                android:text="@{writeReviewFillVM.writeReviewFillModel.txtPleasewriteOv}"
+                style="@style/txtPoppinsbold14_1" tools:text="@string/msg_please_write_overall"/>
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBarRatingbar"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_marginTop="@dimen/_13pxv"
+                android:layout_width="wrap_content" android:numStars="5"
+                android:progressBackgroundTint="@color/blue_50"
+                android:progressTint="@color/yellow_700"
+                android:rating="4" style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearWritereviewSe"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWriteYourRevi"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{writeReviewFillVM.writeReviewFillModel.txtWriteYourRevi}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/msg_write_your_review"/>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearReviewfield"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStylecornerRadius">
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearAddreview"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+                        <TextView android:ellipsize="end"
+                            android:gravity="start"
+                            android:id="@+id/txtAddReview"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/_124pxv"
+                            android:layout_marginEnd="@dimen/_16pxh"
+                            android:layout_marginStart="@dimen/_16pxh"
+                            android:layout_marginTop="@dimen/_17pxv"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.03"
+                            android:singleLine="true"
+                            android:text="@{writeReviewFillVM.writeReviewFillModel.txtAddReview}"
+                            style="@style/txtPoppinsbold12_3" tools:text="@string/lbl_add_review"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnWriteReviewOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_57pxv"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_marginTop="@dimen/_276pxv"
+                android:layout_width="@dimen/_343pxh"
+                android:letterSpacing="0.03"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_write_review"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_write_review"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

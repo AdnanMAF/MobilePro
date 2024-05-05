@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="gridbagRowModel" type="com.adnansapplication.app.modules.explore.data.model.GridbagRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearManWorkEquipm"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_white_a700_border_blue_50_radius_35"
+            android:id="@+id/btnBag" android:layout_gravity="start"
+            android:layout_height="@dimen/_70pxh"
+            android:layout_width="@dimen/_70pxh"
+            android:paddingHorizontal="@dimen/_26pxh"
+            android:paddingVertical="@dimen/_26pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_bag" tools:ignore="ContentDescription"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtOfficeBag"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6pxh"
+            android:layout_marginStart="@dimen/_6pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@{gridbagRowModel.txtOfficeBag}"
+            style="@style/txtPoppinsbold10_1" tools:text="@string/lbl_office_bag"/>
+    </LinearLayout>
+</layout>

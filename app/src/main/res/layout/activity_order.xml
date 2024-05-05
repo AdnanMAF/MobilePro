@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="orderVM" type="com.adnansapplication.app.modules.order.data.viewmodel.OrderVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameOrder"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_gravity="top|center"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_26pxv"
+            android:layout_marginEnd="@dimen/_15pxh"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowarrowleft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_12pxh"
+                        android:layout_marginBottom="@dimen/_6pxv"
+                        android:layout_marginTop="@dimen/_5pxv"
+                        android:layout_width="@dimen/_6pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft_bluegray_300"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft_bluegray_300"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOrder"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_21pxh"
+                        android:layout_weight="0.89"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{orderVM.orderModel.txtOrder}"
+                        style="@style/txtPoppinsbold16" tools:text="@string/lbl_order"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="start" android:id="@+id/recyclerOrders"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_10pxh}"
+                style="@style/groupStylecornerRadius"
+                tools:itemCount="3" tools:listitem="@layout/row_orders"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

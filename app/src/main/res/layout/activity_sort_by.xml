@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="sortByVM" type="com.adnansapplication.app.modules.sortby.data.viewmodel.SortByVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameSortBy"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_gravity="top|start"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_28pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_9pxh"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowarrowleft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_12pxh"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_marginTop="@dimen/_3pxv"
+                        android:layout_width="@dimen/_6pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft_bluegray_300"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft_bluegray_300"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSortBy"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_21pxh"
+                        android:layout_weight="0.91"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{sortByVM.sortByModel.txtSortBy}"
+                        style="@style/txtPoppinsbold16" tools:text="@string/lbl_sort_by"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBestMatch"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_43pxv"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{sortByVM.sortByModel.txtBestMatch}"
+                style="@style/txtPoppinsbold12_1" tools:text="@string/lbl_best_match"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTimeendingso"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_37pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{sortByVM.sortByModel.txtTimeendingso}"
+                style="@style/txtPoppinsbold12" tools:text="@string/msg_time_ending_soonest"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTimenewlylis"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_35pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{sortByVM.sortByModel.txtTimenewlylis}"
+                style="@style/txtPoppinsbold12" tools:text="@string/msg_time_newly_listed"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtPriceShippin"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_7pxh"
+                android:layout_marginTop="@dimen/_36pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{sortByVM.sortByModel.txtPriceShippin}"
+                style="@style/txtPoppinsbold12" tools:text="@string/msg_price_shipping"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtPriceShippinOne"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_36pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{sortByVM.sortByModel.txtPriceShippinOne}"
+                style="@style/txtPoppinsbold12" tools:text="@string/msg_price_shipping2"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtDistanceneare"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_34pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{sortByVM.sortByModel.txtDistanceneare}"
+                style="@style/txtPoppinsbold12" tools:text="@string/msg_distance_nearest"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

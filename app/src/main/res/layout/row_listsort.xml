@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listsortRowModel" type="com.adnansapplication.app.modules.notificationoffer.data.model.ListsortRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearOfferitem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageSort"
+            android:layout_height="@dimen/_18pxh"
+            android:layout_marginBottom="@dimen/_113pxv"
+            android:layout_marginStart="@dimen/_19pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_width="@dimen/_18pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_sort_light_blue_a200"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_sort_light_blue_a200"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearOfferdetails"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_weight="0.94" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTheBestTitle"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{listsortRowModel.txtTheBestTitle}"
+                style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_the_best_title"/>
+            <TextView android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03"
+                android:text="@{listsortRowModel.txtDescription}"
+                style="@style/txtPoppinsregular12" tools:text="@string/msg_culpa_cillum_consectetur"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{listsortRowModel.txtTime}"
+                style="@style/txtPoppinsregular10_1" tools:text="@string/msg_april_30_2014_1_01"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
